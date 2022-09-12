@@ -3,9 +3,13 @@ package com.cydeo.streotype_annotation;
 import com.cydeo.streotype_annotation.casefactory.Case;
 import com.cydeo.streotype_annotation.monitorfactory.Monitor;
 import com.cydeo.streotype_annotation.motherboardfactory.Motherboard;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 @Getter
+@Component
 public class PC {
 
     private Case theCase;
