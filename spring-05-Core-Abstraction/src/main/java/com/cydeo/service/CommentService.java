@@ -6,7 +6,7 @@ import com.cydeo.proxy.EmailCommentNotificationProxy;
 import com.cydeo.repository.CommentRepository;
 import com.cydeo.repository.DBCommentRepository;
 
-public class CommentService {
+public class CommentService {  //BREAK 2:15 PM ( 5MIN REVIEW )
 
     private CommentRepository commentRepository;
     private CommentNotificationProxy commentNotificationProxy;
