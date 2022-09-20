@@ -40,7 +40,7 @@ public class CarController {
 
 
     @RequestMapping("/info/{make}/{year}")  //localhost:8080/info/honda/2015
-    public String getCarInfo(@PathVariable String make,@PathVariable String year){
+    public String getCarInfo(@PathVariable String make,@PathVariable int year){
 
         System.out.println(make);
         System.out.println(year);
