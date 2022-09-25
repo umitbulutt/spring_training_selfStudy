@@ -39,9 +39,14 @@
 </ul>
 
 <h2>Printing Student's Last Name</h2>
+
+
 <ul>
     <li th:each=" student : ${students} " th:text="${student.lastName}"></li>
 </ul>
+
+
+
 
 <h2>Printing Student's in table</h2>
 
@@ -51,28 +56,17 @@
         <td>First Name</td>
         <td>Last Name</td>
         <td>Age</td>
-        <td>Gender</td>
+        <td>State</td>
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <td th:text="${mentors.get(0).firstName}"></td>
-        <td th:text="${mentors.get(0).lastName}"></td>
-        <td th:text="${mentors.get(0).age}"></td>
-        <td th:text="${mentors.get(0).getGender()}"></td>
+    <tr th:each="student : ${students} ">
+        <td th:text="${student.firstName}"></td>
+        <td th:text="${student.lastName}"></td>
+        <td th:text="${student.age}"></td>
+        <td th:text="${student.state}"></td>
     </tr>
-    <tr>
-        <td th:text="${mentors.get(1).firstName}"></td>
-        <td th:text="${mentors.get(1).lastName}"></td>
-        <td th:text="${mentors.get(1).age}"></td>
-        <td th:text="${mentors.get(1).getGender()}"></td>
-    </tr>
-    <tr>
-        <td th:text="${mentors.get(2).firstName}"></td>
-        <td th:text="${mentors.get(2).lastName}"></td>
-        <td th:text="${mentors.get(2).age}"></td>
-        <td th:text="${mentors.get(2).getGender()}"></td>
-    </tr>
+
     </tbody>
 </table>
 
