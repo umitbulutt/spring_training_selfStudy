@@ -23,7 +23,8 @@ public class PaymentDetail {
     @Column(columnDefinition = "DATE")
     private LocalDate payoutDate;
 
-    @OneToOne(mappedBy = "paymentDetail")
+    @OneToOne(mappedBy = "paymentDetail",cascade=CascadeType.ALL)
+    @JoinColumn(name = "payment_id")
     private Payment payment;
 
     public PaymentDetail(BigDecimal merchantPayoutAmount, BigDecimal commissionAmount, LocalDate payoutDate) {
