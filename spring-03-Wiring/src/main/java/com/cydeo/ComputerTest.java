@@ -1,5 +1,6 @@
 package com.cydeo;
 
+
 import com.cydeo.casefactory.Case;
 import com.cydeo.config.PcConfig;
 import org.springframework.context.ApplicationContext;
@@ -12,8 +13,14 @@ public class ComputerTest {
 
         ApplicationContext container = new AnnotationConfigApplicationContext(PcConfig.class);
 
-        Case theCase = container.getBean(Case.class);
+        Case theCase =  container.getBean(Case.class);
 
         System.out.println(theCase.getDimensions().getDepth());
+
+
+
+
+
+
     }
 }

@@ -1,7 +1,9 @@
 package com.cydeo.streotype_annotation.casefactory;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 @Getter
 public abstract class Case {
@@ -9,7 +11,6 @@ public abstract class Case {
     private String model;
     private String manufacturer;
     private String powerSupply;
-
     @Autowired
     private Dimensions dimensions;
 

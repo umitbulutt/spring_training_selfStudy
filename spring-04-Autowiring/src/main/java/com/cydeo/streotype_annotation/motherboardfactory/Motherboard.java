@@ -1,6 +1,8 @@
 package com.cydeo.streotype_annotation.motherboardfactory;
 
 import lombok.Getter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 @Getter
 public abstract class Motherboard {
@@ -10,6 +12,7 @@ public abstract class Motherboard {
     private int ramSlots;
     private int cardSlots;
     private String bios;
+
 
     public Motherboard(String model, String manufacturer, int ramSlots, int cardSlots, String bios) {
         this.model = model;
